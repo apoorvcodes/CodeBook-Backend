@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const constant_1 = require("./constant");
+const logger_1 = require("./logger/logger");
 const app = express_1.default();
 const ExpressRun = () => {
     app.get('/', function (req, res, next) {
@@ -13,7 +14,7 @@ const ExpressRun = () => {
         res.send('Hello World');
     });
     app.listen(constant_1.Port, constant_1.Host, () => {
-        console.log('Working');
+        logger_1.logger('Working');
     });
 };
 ExpressRun();

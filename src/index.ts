@@ -1,6 +1,7 @@
 import express from 'express';
 import { Request, Response, NextFunction,Express } from 'express'; 
 import { Port,Host } from './constant';
+import {logger } from './logger/logger'
 const app:Express = express()
 
 
@@ -13,7 +14,7 @@ next
 })
 
 app.listen(Port, Host, () => {
-console.log('Working')
+logger('Working')
 })
 }
 
