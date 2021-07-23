@@ -1,6 +1,6 @@
-import {model, Schema} from 'mongoose'
+import {model, Schema, Model} from 'mongoose'
 
-export const UserInfo = model("User", new Schema({
+export const UserInfo: Model<unknown, {}, {}> = model("Userinfo", new Schema({
  name: {
    type: String,
    maxlength: 24,
