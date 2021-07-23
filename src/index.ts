@@ -3,7 +3,7 @@ import { Request, Response, NextFunction,Express } from 'express';
 import { Port,Host } from './constant';
 import {logger } from './logger/logger'
 const app:Express = express()
-
+import { MongoConnect } from './Database/main'
 
 
 const ExpressRun = () => {
@@ -19,5 +19,5 @@ logger('Working')
 }
 
 
-
+MongoConnect();
 ExpressRun();
